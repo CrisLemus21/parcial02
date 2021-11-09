@@ -1,12 +1,13 @@
-﻿@model parcial2.Models.caja
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model parcial2.Models.caja
 
-@{ ViewBag.Title = "indexV";
-    }
-
-
-@using (Html.BeginForm("indexV", "caja", FormMethod.Post))
+@using (Html.BeginForm("Index", "caja", FormMethod.Post))
 {
     <center><h3>ingrese la cantidad a retirar</h3></center>
     <center>@Html.TextBoxFor(aq => aq.caj)</center>
+    <br />
     <center> <input type="submit" class="btn btn-primary" /></center>
 }

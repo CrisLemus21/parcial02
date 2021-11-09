@@ -7,6 +7,6 @@ namespace parcial2.Models
 {
     public class caja
     {
-        public int caj{ get; set; }
+        public int caj { get; set; }
     }
 }

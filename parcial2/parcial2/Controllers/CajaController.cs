@@ -7,20 +7,15 @@ using System.Web.Mvc;
 
 namespace parcial2.Controllers
 {
-    public class CajaController : Controller
+    public class cajaController : Controller
     {
-        // GET: Caja
+        // GET: caja
         public ActionResult Index()
         {
             return View();
         }
         [HttpGet]
-        public ActionResult indexV()
-        {
-            return View();
-        }
-        [HttpGet]
-        public ActionResult noSirve()
+        public ActionResult Nosirve()
         {
             return View();
         }
@@ -30,19 +25,17 @@ namespace parcial2.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult indexV(caja ca)
+        public ActionResult Index(caja cajita)
         {
-            if(ca.caj % 5 == 0)
+            if (cajita.caj % 5 == 0)
             {
-                return Redirect("sirve");
-
+                return RedirectToAction("sirve");
             }
             else
             {
-                return Redirect("noSirve");
+                return RedirectToAction("Nosirve");
             }
             return View();
         }
-
     }
 }
